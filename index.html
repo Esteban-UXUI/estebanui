@@ -183,6 +183,35 @@
     width: max-content;
     animation: marquee 30s linear infinite;
   }
+  .logo-bar-item {
+    width: 3rem;
+    max-width: 3.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-bar-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .logo-bar-item--sentria img {
+    filter: grayscale(1) brightness(0.75) saturate(0);
+  }
+  @media (min-width: 640px) {
+    .logo-bar-item {
+      width: 3.75rem;
+      max-width: 4rem;
+    }
+  }
+  @media (min-width: 768px) {
+    .logo-bar-item {
+      width: 4.25rem;
+      max-width: 4.5rem;
+    }
+  }
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -360,28 +389,27 @@
 <!-- Logo Bar: Marquee -->
 <div class="border-t border-gray-100 marquee-container mt-16 pt-6">
 <div class="marquee-content flex items-center">
-<div class="flex items-center space-x-10 sm:space-x-16 px-6 sm:px-12 opacity-60 grayscale">
-<!-- Logo normalization: same frame for all logos (consistent sizing) -->
-<div class="h-10 sm:h-12 w-28 sm:w-32 flex items-center justify-center"><img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/totalplay_1_lwfzs9.svg" alt="Totalplay logo"/></div>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Samsung_sniaso.svg" alt="Samsung logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Sentria_1_pi1zlo.svg" alt="Sentria logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Group_bx1wmv.svg" alt="Group logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Seguros_Bolivar_utw23h.svg" alt="Seguros Bolivar logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Logotipo_Ciencuadras_bwrkpb.svg" alt="Ciencuadras logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/logo_jelpit_color_1_ivx9wa.svg" alt="Jelpit logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Alcatel_logo_2016_1_cycv8k.svg" alt="Alcatel logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Banco_Santander_Logotipo_1_knglri.svg" alt="Banco Santander logo"/>
+<div class="flex items-center space-x-4 sm:space-x-6 md:space-x-8 px-3 sm:px-6 opacity-60 grayscale">
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/totalplay_1_lwfzs9.svg" alt="Totalplay logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Samsung_sniaso.svg" alt="Samsung logo"/></div>
+<div class="logo-bar-item logo-bar-item--sentria"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Sentria_1_pi1zlo.svg" alt="Sentria logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Group_bx1wmv.svg" alt="Group logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Seguros_Bolivar_utw23h.svg" alt="Seguros Bolivar logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Logotipo_Ciencuadras_bwrkpb.svg" alt="Ciencuadras logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/logo_jelpit_color_1_ivx9wa.svg" alt="Jelpit logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Alcatel_logo_2016_1_cycv8k.svg" alt="Alcatel logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Banco_Santander_Logotipo_1_knglri.svg" alt="Banco Santander logo"/></div>
 </div>
-<div class="flex items-center space-x-10 sm:space-x-16 px-6 sm:px-12 opacity-60 grayscale">
-<div class="h-8 sm:h-10 w-20 sm:w-24 flex items-center justify-center"><img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/totalplay_1_lwfzs9.svg" alt="Totalplay logo"/></div>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Samsung_sniaso.svg" alt="Samsung logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Sentria_1_pi1zlo.svg" alt="Sentria logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Group_bx1wmv.svg" alt="Group logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Seguros_Bolivar_utw23h.svg" alt="Seguros Bolivar logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Logotipo_Ciencuadras_bwrkpb.svg" alt="Ciencuadras logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/logo_jelpit_color_1_ivx9wa.svg" alt="Jelpit logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Alcatel_logo_2016_1_cycv8k.svg" alt="Alcatel logo"/>
-<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Banco_Santander_Logotipo_1_knglri.svg" alt="Banco Santander logo"/>
+<div class="flex items-center space-x-4 sm:space-x-6 md:space-x-8 px-3 sm:px-6 opacity-60 grayscale">
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/totalplay_1_lwfzs9.svg" alt="Totalplay logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Samsung_sniaso.svg" alt="Samsung logo"/></div>
+<div class="logo-bar-item logo-bar-item--sentria"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Sentria_1_pi1zlo.svg" alt="Sentria logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Group_bx1wmv.svg" alt="Group logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Seguros_Bolivar_utw23h.svg" alt="Seguros Bolivar logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Logotipo_Ciencuadras_bwrkpb.svg" alt="Ciencuadras logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/logo_jelpit_color_1_ivx9wa.svg" alt="Jelpit logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Alcatel_logo_2016_1_cycv8k.svg" alt="Alcatel logo"/></div>
+<div class="logo-bar-item"><img class="w-full h-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Banco_Santander_Logotipo_1_knglri.svg" alt="Banco Santander logo"/></div>
 </div>
 </div>
 </div>
