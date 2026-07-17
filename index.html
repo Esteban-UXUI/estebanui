@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-surface": "#e5e2e1",
+                "on-secondary-fixed-variant": "#004e5c",
+                "tertiary": "#c9c6c5",
+                "secondary": "#4cd7f6",
+                "on-primary": "#3c0091",
+                "surface": "#131313",
+                "secondary-fixed": "#acedff",
+                "surface-tint": "#d0bcff",
+                "on-surface-variant": "#cbc3d7",
+                "surface-container-highest": "#353535",
+                "tertiary-fixed": "#e5e2e1",
+                "tertiary-container": "#929090",
+                "error-container": "#93000a",
+                "outline": "#958ea0",
+                "background": "#131313",
+                "surface-dim": "#131313",
+                "inverse-on-surface": "#303030",
+                "secondary-fixed-dim": "#4cd7f6",
+                "surface-container-low": "#1b1b1c",
+                "on-tertiary-fixed-variant": "#474646",
+                "on-tertiary": "#313030",
+                "on-secondary": "#003640",
+                "on-primary-container": "#340080",
+                "primary-fixed": "#e9ddff",
+                "surface-container-high": "#2a2a2a",
+                "tertiary-fixed-dim": "#c9c6c5",
+                "inverse-surface": "#e5e2e1",
+                "on-secondary-fixed": "#001f26",
+                "on-primary-fixed-variant": "#5516be",
+                "surface-bright": "#393939",
+                "error": "#ffb4ab",
+                "surface-variant": "#353535",
+                "primary-fixed-dim": "#d0bcff",
+                "primary": "#d0bcff",
+                "on-secondary-container": "#00424e",
+                "on-tertiary-container": "#2a2a29",
+                "surface-container-lowest": "#0e0e0e",
+                "on-primary-fixed": "#23005c",
+                "on-tertiary-fixed": "#1c1b1b",
+                "inverse-primary": "#6d3bd7",
+                "secondary-container": "#03b5d3",
+                "on-error-container": "#ffdad6",
+                "on-error": "#690005",
+                "primary-container": "#a078ff",
+                "outline-variant": "#494454",
+                "surface-container": "#202020",
+                "on-background": "#e5e2e1",
+                "brand-dark": "#131313",
+                "brand-lime": "#bef264",
+                "brand-gray": "#958ea0"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-desktop": "48px",
+                "container-max": "1280px",
+                "margin-mobile": "16px",
+                "unit": "4px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "label-md": ["Geist", "sans-serif"],
+                "headline-lg": ["Geist", "sans-serif"],
+                "body-md": ["Inter", "sans-serif"],
+                "mono": ["Geist", "sans-serif"],
+                "headline-lg-mobile": ["Geist", "sans-serif"],
+                "headline-md": ["Geist", "sans-serif"],
+                "headline-xl": ["Geist", "sans-serif"],
+                "body-lg": ["Inter", "sans-serif"],
+                "sans": ["Inter", "sans-serif"],
+                "geist": ["Geist", "sans-serif"]
+        },
+        "fontSize": {
+                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "600"}],
+                "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+                "mono": ["13px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .section-full {
+    min-height: 100vh;
+  }
+
+  @font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+  .mesh-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-color: #131313;
+  }
+  .aurora-blob {
+    position: absolute;
+    filter: blur(120px);
+    opacity: 0.3;
+    border-radius: 50%;
+  }
+  .blob-blue { width: 600px; height: 600px; background: #004e5c; top: -10%; right: -5%; }
+  .blob-green { width: 500px; height: 500px; background: #bef264; bottom: -5%; left: -10%; opacity: 0.15; }
+  .blob-gray { width: 400px; height: 400px; background: #958ea0; top: 30%; left: 20%; opacity: 0.1; }
+  
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+  }
+
+  .headline-kerning { letter-spacing: -0.04em; }
+
+  .underline-expand {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .underline-expand::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #bef264;
+    transition: width 0.3s ease;
+  }
+  .underline-expand:hover::after { width: 100%; }
+
+  .stadium-mask {
+    clip-path: inset(0 round 200px);
+  }
+
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .perspective-container {
+    perspective: 1200px;
+  }
+  .curved-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .gallery-item {
+    transition: all 0.5s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .gallery-item.side {
+    width: 280px;
+    height: 400px;
+    opacity: 0.5;
+    background: #2a2a2a;
+  }
+  .gallery-item.center {
+    width: 450px;
+    height: 600px;
+    z-index: 10;
+    background: #353535;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .gallery-item.left { transform: rotateY(25deg) scale(0.85); }
+  .gallery-item.right { transform: rotateY(-25deg) scale(0.85); }
+
+  .project-card {
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-8px) scale(1.01);
+  }
+  .project-card.is-active {
+    border-color: rgba(190, 242, 100, 0.7);
+    box-shadow: 0 0 0 1px rgba(190, 242, 100, 0.25), 0 20px 45px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px) scale(1.01);
+  }
+
+  [data-project-background] {
+    transition: background-image 0.7s ease, opacity 0.7s ease, transform 0.7s ease;
+  }
+</style></head><body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-lime selection:text-black">
+<!-- BEGIN: HeroWrapper -->
+<section class="relative min-h-screen flex flex-col overflow-hidden" data-purpose="hero-container">
+<!-- Background Elements -->
+<div class="mesh-background">
+<div class="aurora-blob blob-blue"></div>
+<div class="aurora-blob blob-green"></div>
+<div class="aurora-blob blob-gray"></div>
+<div class="grid-overlay"></div>
+</div>
+<!-- BEGIN: MainHeader -->
+<header class="relative z-10 w-full px-6 py-6 flex items-center justify-between max-w-7xl mx-auto" data-purpose="navigation-bar">
+<!-- Logo -->
+<div class="flex items-center space-x-1"><span class="text-lg">🇬🇧</span></div>
+<!-- Auth and CTA -->
+<div class="flex items-center space-x-6">
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-gray">
+<a class="hover:text-white transition-colors" href="#">Home</a>
+<a class="hover:text-white transition-colors" href="#my-work">My work</a>
+<a class="hover:text-white transition-colors" href="#">Brands</a>
+</nav>
+<button aria-label="Toggle theme" class="flex items-center justify-center w-8 h-8 rounded-sm border border-white/10 hover:border-brand-lime transition-colors group"><span class="material-symbols-outlined text-brand-gray group-hover:text-brand-lime transition-colors" data-original-icon="dark_mode" style="font-size: 18px;">dark_mode</span></button>
+<a class="bg-brand-lime text-black px-5 py-2.5 rounded-sm font-semibold text-sm hover:bg-white transition-all duration-300" href="#">Contactar</a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="relative z-10 flex-grow flex flex-col justify-center px-6 max-w-7xl mx-auto w-full pt-12 pb-24">
+<!-- Headline Section -->
+<div class="mb-32 max-w-5xl"><h1 class="text-6xl md:text-8xl font-bold headline-kerning font-geist">Diseño de producto digital <font color="#bef264">Para la era</font><div><font color="#bef264">de la IA</font></div></h1></div>
+<!-- BEGIN: SplitBottomSection -->
+<div class="grid md:grid-cols-2 gap-16 border-t border-white/10 pt-12 mt-auto" data-purpose="footer-call-to-action">
+<!-- Left Column: Description -->
+<div class="flex flex-col justify-between">
+<p class="text-xs uppercase tracking-widest text-brand-gray font-semibold mb-6">Quién soy:</p>
+<p class="text-2xl md:text-3xl leading-snug font-medium text-white/90">Diseño experiencias UX/UI fluidas que transforman modelos de inteligencia artificial en productos intuitivos, interactivos y con un alto retorno de inversión</p>
+</div>
+<!-- Right Column: Interactive Component -->
+<div class="flex flex-col justify-between border-l border-white/10 pl-0 md:pl-16">
+<p class="text-xs uppercase tracking-widest text-brand-gray font-semibold mb-6">Agendemos una meeting</p>
+<div class="flex flex-col space-y-8">
+<div class="w-full max-w-md">
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-2xl focus:ring-0 focus:border-brand-lime transition-colors placeholder:text-brand-gray/50" placeholder="Your phone number" type="tel"/>
+</div>
+<div class="flex justify-start">
+<button class="text-4xl md:text-5xl font-medium underline-expand group">
+                Get a call
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- END: SplitBottomSection -->
+</main>
+<!-- END: MainContent -->
+</section>
+<!-- END: HeroWrapper -->
+<!-- BEGIN: AboutMeSection -->
+<section class="section-full bg-white text-black px-6 md:px-12 overflow-hidden py-12" data-purpose="about-me-section">
+<div class="max-w-7xl mx-auto">
+<!-- Header -->
+<div class="text-center mb-8">
+<h2 class="font-geist font-bold text-5xl md:text-7xl mb-2 tracking-tight uppercase">Esteban</h2>
+<h3 class="font-geist text-3xl md:text-4xl mb-4 font-semibold text-brand-gray uppercase tracking-wider">UI/UX Interaction Designer</h3>
+<p class="font-geist text-xl md:text-2xl font-medium">Based in Colombia</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Column: Biography, Contact, Services -->
+<div class="lg:col-span-3 space-y-12 text-center lg:text-left">
+<div data-purpose="biography" class="flex flex-col items-center lg:items-start">
+<h4 class="text-[10px] tracking-[0.2em] font-bold text-gray-400 mb-6 uppercase">Biography</h4>
+<p class="text-lg leading-relaxed italic text-gray-800 font-sans">
+          Work for money and<br/>
+          design for love!<br/>
+          I'm Esteban, a UI/UX<br/>
+          Interaction Designer based<br/>
+          in Colombia
+        </p>
+<a class="mt-6 inline-flex items-center gap-2 px-6 py-3 border border-black text-black font-sans font-semibold text-sm uppercase tracking-wider hover:bg-black hover:text-white transition-all duration-300 rounded-sm" href="#">
+<span class="material-symbols-outlined" style="font-size: 20px;">download</span>
+  Download CV
+</a></div>
+<div data-purpose="services" class="flex flex-col items-center lg:items-start">
+<h4 class="text-[10px] tracking-[0.2em] font-bold text-gray-400 mb-6 uppercase">Services</h4>
+<div class="text-lg font-serif italic text-gray-800 space-y-1">
+<p class="">Website Design</p>
+<p class="">Mobile Application Design</p>
+<p class="">Design systems</p>
+</div>
+</div>
+</div>
+<!-- Central Element: Video in Stadium Mask -->
+<div class="lg:col-span-6 flex justify-center relative">
+<!-- Decorative Waves (SVG background) -->
+<div class="absolute inset-0 z-0 flex items-center justify-between opacity-10 pointer-events-none px-4">
+<svg class="w-24 h-auto" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50C25 30 75 70 100 50M0 60C25 40 75 80 100 60M0 70C25 50 75 90 100 70" stroke="currentColor" stroke-width="2"></path></svg>
+<svg class="w-24 h-auto" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 50C25 30 75 70 100 50M0 60C25 40 75 80 100 60M0 70C25 50 75 90 100 70" stroke="currentColor" stroke-width="2"></path></svg>
+</div>
+<div class="relative z-10 w-full max-w-[400px] aspect-[2/3] stadium-mask overflow-hidden bg-gray-100">
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="">
+<source class="" src="https://res.cloudinary.com/dsbdjteyj/video/upload/v1782216322/video_para_web_sin_marca_de_agua_jagc0q.webm" type="video/webm"/>
+          Your browser does not support the video tag.
+        </video>
+</div>
+</div>
+<!-- Right Column: Stats -->
+<div class="lg:col-span-3 lg:text-right">
+<div class="mt-8 grid grid-cols-3 gap-3 lg:gap-4 lg:block lg:space-y-12">
+<div class="text-center lg:text-right" data-purpose="stat-item">
+<h4 class="text-[8px] sm:text-[9px] tracking-[0.2em] font-bold text-gray-400 mb-2 uppercase leading-tight">Years of<br/>Experience</h4>
+<p class="text-3xl sm:text-4xl md:text-5xl font-serif">8</p>
+</div>
+<div class="text-center lg:text-right" data-purpose="stat-item">
+<h4 class="text-[8px] sm:text-[9px] tracking-[0.2em] font-bold text-gray-400 mb-2 uppercase leading-tight">Satisfaction<br/>Clients</h4>
+<p class="text-3xl sm:text-4xl md:text-5xl font-serif">100%</p>
+</div>
+<div class="text-center lg:text-right" data-purpose="stat-item">
+<h4 class="text-[8px] sm:text-[9px] tracking-[0.2em] font-bold text-gray-400 mb-2 uppercase leading-tight">Clients on<br/>Worldwide</h4>
+<p class="text-3xl sm:text-4xl md:text-5xl font-serif">+ 80</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Logo Bar: Marquee -->
+<div class="border-t border-gray-100 marquee-container mt-16 pt-6">
+<div class="marquee-content flex items-center">
+<div class="flex items-center space-x-10 sm:space-x-16 px-6 sm:px-12 opacity-60 grayscale">
+<!-- Logo normalization: same frame for all logos (consistent sizing) -->
+<div class="h-10 sm:h-12 w-28 sm:w-32 flex items-center justify-center"><img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/totalplay_1_lwfzs9.svg" alt="Totalplay logo"/></div>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Samsung_sniaso.svg" alt="Samsung logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Sentria_1_pi1zlo.svg" alt="Sentria logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Group_bx1wmv.svg" alt="Group logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Seguros_Bolivar_utw23h.svg" alt="Seguros Bolivar logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Logotipo_Ciencuadras_bwrkpb.svg" alt="Ciencuadras logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/logo_jelpit_color_1_ivx9wa.svg" alt="Jelpit logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Alcatel_logo_2016_1_cycv8k.svg" alt="Alcatel logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Banco_Santander_Logotipo_1_knglri.svg" alt="Banco Santander logo"/>
+</div>
+<div class="flex items-center space-x-10 sm:space-x-16 px-6 sm:px-12 opacity-60 grayscale">
+<div class="h-8 sm:h-10 w-20 sm:w-24 flex items-center justify-center"><img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/totalplay_1_lwfzs9.svg" alt="Totalplay logo"/></div>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Samsung_sniaso.svg" alt="Samsung logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302583/Sentria_1_pi1zlo.svg" alt="Sentria logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Group_bx1wmv.svg" alt="Group logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Seguros_Bolivar_utw23h.svg" alt="Seguros Bolivar logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Logotipo_Ciencuadras_bwrkpb.svg" alt="Ciencuadras logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/logo_jelpit_color_1_ivx9wa.svg" alt="Jelpit logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Alcatel_logo_2016_1_cycv8k.svg" alt="Alcatel logo"/>
+<img class="h-8 sm:h-10 w-auto object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302581/Banco_Santander_Logotipo_1_knglri.svg" alt="Banco Santander logo"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BEGIN: MyWorkSection -->
+<section class="section-full relative py-32 overflow-hidden group/section transition-all duration-700" data-purpose="portfolio-section" id="my-work" style="background-color: #17171c; color: white;">
+<div class="absolute inset-0 z-0">
+  <div class="absolute inset-0 bg-cover bg-center opacity-25 transition-all duration-700" data-project-background style="background-image: url('https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg');"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-[#17171c]/60 to-[#17171c]/90"></div>
+</div>
+<!-- Subtle Background Grid -->
+<div class="grid-overlay opacity-30"></div><div class="absolute inset-0 bg-brand-lime/5 opacity-0 group-hover/section:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<!-- Header with Project Details -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+<div class="max-w-2xl">
+<h2 class="text-7xl md:text-8xl font-geist font-bold mb-16 tracking-tighter">My work</h2>
+<div class="space-y-6">
+<h3 class="text-4xl md:text-5xl font-geist font-bold text-white" data-project-title>Nexus AI Platform</h3>
+<p class="text-xl md:text-2xl text-brand-gray leading-relaxed max-w-xl" data-project-description>
+            A comprehensive SaaS solution for enterprise AI orchestration. Focusing on seamless user workflows and intuitive data visualization to bridge the gap between complex AI models and actionable business intelligence.
+          </p>
+<div class="flex flex-wrap gap-3 mt-8">
+<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-4 py-1.5 rounded-full text-xs font-geist font-semibold uppercase tracking-wider">UX/UI Design</span>
+<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-4 py-1.5 rounded-full text-xs font-geist font-semibold uppercase tracking-wider">AI Integration</span>
+<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-4 py-1.5 rounded-full text-xs font-geist font-semibold uppercase tracking-wider">Design Systems</span>
+</div>
+</div>
+</div>
+<div class="hidden lg:block text-right">
+<a class="text-6xl font-geist font-medium underline-expand inline-block group" href="#">
+          View case
+        </a>
+</div>
+</div>
+<!-- Visual Gallery Component -->
+<div class="perspective-container">
+<div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 px-4 no-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- Card 1 -->
+<div class="project-card snap-center shrink-0 w-[85vw] md:w-[450px] aspect-[3/4] md:aspect-[2/3] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50 is-active" data-project-card data-title="Sentria" data-description="A polished product experience focused on clarity, storytelling, and a strong visual identity for the brand." data-bg="#17171c" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg">
+<div class="absolute inset-0 bg-gradient-to-br from-brand-lime/20 to-purple-500/10 flex flex-col items-center justify-center p-8">
+<div class="w-full aspect-[16/9] rounded border border-white/10 mb-6 overflow-hidden bg-black/20 transform group-hover:scale-105 transition-transform duration-700">
+  <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg" alt="Project cover 1"/>
+</div>
+<h4 class="text-white font-geist font-bold text-2xl mb-2">Sentria</h4>
+<p class="text-brand-gray text-sm text-center">Brand-led digital experience</p>
+</div>
+<div class="absolute inset-0 bg-brand-lime/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-black font-geist font-bold text-xl uppercase tracking-widest">View Project</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="project-card snap-center shrink-0 w-[85vw] md:w-[450px] aspect-[3/4] md:aspect-[2/3] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="TotalPlay" data-description="A digital product direction that balances entertainment, usability, and scalable interactions across platforms." data-bg="#1e2644" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302584/totalPlayPortada_wlbvhj.webp">
+<div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-brand-lime/10 flex flex-col items-center justify-center p-8">
+<div class="w-full aspect-[16/9] rounded border border-white/10 mb-6 overflow-hidden bg-black/20 transform group-hover:scale-105 transition-transform duration-700">
+  <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302584/totalPlayPortada_wlbvhj.webp" alt="Project cover 2"/>
+</div>
+<h4 class="text-white font-geist font-bold text-2xl mb-2">TotalPlay</h4>
+<p class="text-brand-gray text-sm text-center">Entertainment platform UI</p>
+</div>
+<div class="absolute inset-0 bg-brand-lime/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-black font-geist font-bold text-xl uppercase tracking-widest">View Project</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="project-card snap-center shrink-0 w-[85vw] md:w-[450px] aspect-[3/4] md:aspect-[2/3] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="Design System" data-description="A scalable design system created to streamline product teams and keep interfaces visually consistent and efficient." data-bg="#122b27" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781304167/DESIGN_SYSTEMA_kvtpn5.png">
+<div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-brand-lime/10 flex flex-col items-center justify-center p-8">
+<div class="w-full aspect-[16/9] rounded border border-white/10 mb-6 overflow-hidden bg-black/20 transform group-hover:scale-105 transition-transform duration-700">
+  <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781304167/DESIGN_SYSTEMA_kvtpn5.png" alt="Project cover 3"/>
+</div>
+<h4 class="text-white font-geist font-bold text-2xl mb-2">Design System</h4>
+<p class="text-brand-gray text-sm text-center">Scalable component library</p>
+</div>
+<div class="absolute inset-0 bg-brand-lime/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-black font-geist font-bold text-xl uppercase tracking-widest">View Project</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="project-card snap-center shrink-0 w-[85vw] md:w-[450px] aspect-[3/4] md:aspect-[2/3] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="Design System UI" data-description="A comprehensive interface system designed to support coherent digital products across multiple touchpoints." data-bg="#2d1b3f" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg">
+<div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-brand-lime/10 flex flex-col items-center justify-center p-8">
+<div class="w-full aspect-[16/9] rounded border border-white/10 mb-6 overflow-hidden bg-black/20 transform group-hover:scale-105 transition-transform duration-700">
+  <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg" alt="Project cover 4"/>
+</div>
+<h4 class="text-white font-geist font-bold text-2xl mb-2">Design System UI</h4>
+<p class="text-brand-gray text-sm text-center">Interface system showcase</p>
+</div>
+<div class="absolute inset-0 bg-brand-lime/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-black font-geist font-bold text-xl uppercase tracking-widest">View Project</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="project-card snap-center shrink-0 w-[85vw] md:w-[450px] aspect-[3/4] md:aspect-[2/3] bg-zinc-900 border border-white/10 rounded-lg overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="AI Product Experience" data-description="An experience crafted to turn complex AI capabilities into simple, intuitive interactions for end users." data-bg="#243233" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg">
+<div class="absolute inset-0 bg-gradient-to-br from-zinc-500/10 to-brand-lime/10 flex flex-col items-center justify-center p-8">
+<div class="w-full aspect-[16/9] rounded border border-white/10 mb-6 overflow-hidden bg-black/20 transform group-hover:scale-105 transition-transform duration-700">
+  <img class="w-full h-full object-contain" src="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg" alt="Project cover 5"/>
+</div>
+<h4 class="text-white font-geist font-bold text-2xl mb-2">AI Product Experience</h4>
+<p class="text-brand-gray text-sm text-center">Intelligent interface concept</p>
+</div>
+<div class="absolute inset-0 bg-brand-lime/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<span class="text-black font-geist font-bold text-xl uppercase tracking-widest">View Project</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile View CTA -->
+<div class="lg:hidden mt-16 text-center">
+<a class="text-3xl font-geist font-medium underline-expand inline-block group" href="#">
+        View case
+      </a>
+</div>
+</div>
+</section>
+<!-- END: MyWorkSection -->
+<!-- BEGIN: Footer -->
+<section class="section-full relative bg-brand-dark py-32 overflow-hidden border-t border-white/10" id="contact">
+<div class="grid-overlay opacity-20"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid md:grid-cols-2 gap-16">
+<div>
+<h2 class="text-5xl md:text-7xl font-geist font-bold mb-8 tracking-tighter uppercase leading-none">Let's work<br/>together</h2>
+<p class="text-xl text-brand-gray max-w-md font-geist leading-relaxed">
+          Ready to transform your AI models into intuitive products? Send me a message and let's discuss your next project.
+        </p>
+</div>
+<div class="bg-white/5 p-8 md:p-12 rounded-lg border border-white/10">
+<form class="space-y-8">
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-brand-gray font-semibold font-geist">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-xl focus:ring-0 focus:border-brand-lime transition-colors placeholder:text-brand-gray/30 font-geist" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-brand-gray font-semibold font-geist">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-xl focus:ring-0 focus:border-brand-lime transition-colors placeholder:text-brand-gray/30 font-geist" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-brand-gray font-semibold font-geist">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-xl focus:ring-0 focus:border-brand-lime transition-colors placeholder:text-brand-gray/30 font-geist" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest text-brand-gray font-semibold font-geist">Project Requirement</label>
+<textarea class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-xl focus:ring-0 focus:border-brand-lime transition-colors placeholder:text-brand-gray/30 font-geist resize-none" placeholder="Tell me about your project..." rows="3"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-brand-lime text-black py-4 rounded-sm font-bold text-sm uppercase tracking-widest hover:bg-white transition-all duration-300" type="submit">
+              Send Message
+            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section><footer class="relative bg-brand-dark py-12 border-t border-white/10 overflow-hidden" data-purpose="site-footer">
+<div class="grid-overlay opacity-10"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center space-x-8">
+<a class="text-brand-gray hover:text-brand-lime transition-colors text-sm font-geist uppercase tracking-widest font-semibold" href="#">LinkedIn</a>
+<a class="text-brand-gray hover:text-brand-lime transition-colors text-sm font-geist uppercase tracking-widest font-semibold" href="#">Behance</a>
+<a class="text-brand-gray hover:text-brand-lime transition-colors text-sm font-geist uppercase tracking-widest font-semibold" href="#">WhatsApp</a>
+</div>
+<div class="text-brand-gray text-sm font-geist">
+        © 2024 Esteban. All rights reserved.
+      </div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<script>
+  const projectSection = document.getElementById('my-work');
+  const projectTitle = projectSection?.querySelector('[data-project-title]');
+  const projectDescription = projectSection?.querySelector('[data-project-description]');
+  const projectBackground = projectSection?.querySelector('[data-project-background]');
+
+  document.querySelectorAll('[data-project-card]').forEach((card) => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('[data-project-card]').forEach((item) => item.classList.remove('is-active'));
+      card.classList.add('is-active');
+
+      if (projectTitle) {
+        projectTitle.textContent = card.getAttribute('data-title') || projectTitle.textContent;
+      }
+      if (projectDescription) {
+        projectDescription.textContent = card.getAttribute('data-description') || projectDescription.textContent;
+      }
+      if (projectSection) {
+        projectSection.style.backgroundColor = card.getAttribute('data-bg') || '#17171c';
+      }
+      if (projectBackground) {
+        const imageUrl = card.getAttribute('data-image');
+        projectBackground.style.opacity = '0.1';
+        setTimeout(() => {
+          projectBackground.style.backgroundImage = imageUrl ? `url('${imageUrl}')` : '';
+          projectBackground.style.opacity = '0.25';
+        }, 120);
+      }
+    });
+  });
+</script>
+</body></html>
