@@ -480,41 +480,41 @@
 </div>
 </section>
 <!-- BEGIN: MyWorkSection -->
-<section class="section-full relative py-10 md:py-14 overflow-hidden group/section transition-all duration-700 min-h-screen flex flex-col justify-center" data-purpose="portfolio-section" id="my-work" style="background-color: #17171c; color: white;">
+<section class="section-full relative py-8 sm:py-10 md:py-14 overflow-hidden group/section transition-all duration-700 min-h-screen flex flex-col justify-center" data-purpose="portfolio-section" id="my-work" style="background-color: #17171c; color: white; max-width: 100vw;">
 <div class="absolute inset-0 z-0">
   <div class="absolute inset-0 bg-cover bg-center opacity-25 transition-all duration-700" data-project-background style="background-image: url('https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg');"></div>
   <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-[#17171c]/60 to-[#17171c]/90"></div>
 </div>
 <!-- Subtle Background Grid -->
 <div class="grid-overlay opacity-30"></div><div class="absolute inset-0 bg-brand-lime/5 opacity-0 group-hover/section:opacity-100 transition-opacity duration-700 pointer-events-none z-0"></div>
-<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 relative z-10" style="max-width:min(90vw, 1280px);">
 <!-- Header with Project Details -->
-<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-12 md:mb-16 lg:mb-24 gap-6 sm:gap-8 lg:gap-12">
 <div class="max-w-2xl">
-<h2 class="text-7xl md:text-8xl font-geist font-bold mb-16 tracking-tighter">My work</h2>
-<div class="space-y-6">
-<h3 class="text-4xl md:text-5xl font-geist font-bold text-white" data-project-title>Nexus AI Platform</h3>
-<p class="text-xl md:text-2xl text-brand-gray leading-relaxed max-w-xl" data-project-description>
+<h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-geist font-bold mb-6 sm:mb-8 md:mb-10 lg:mb-16 tracking-tighter">My work</h2>
+<div class="space-y-4 sm:space-y-6">
+<h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-geist font-bold text-white leading-tight" data-project-title>Nexus AI Platform</h3>
+<p class="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-gray leading-relaxed max-w-xl" data-project-description>
             A comprehensive SaaS solution for enterprise AI orchestration. Focusing on seamless user workflows and intuitive data visualization to bridge the gap between complex AI models and actionable business intelligence.
           </p>
-<div class="flex flex-wrap gap-3 mt-8">
-<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-4 py-1.5 rounded-full text-xs font-geist font-semibold uppercase tracking-wider">UX/UI Design</span>
-<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-4 py-1.5 rounded-full text-xs font-geist font-semibold uppercase tracking-wider">AI Integration</span>
-<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-4 py-1.5 rounded-full text-xs font-geist font-semibold uppercase tracking-wider">Design Systems</span>
+<div class="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6 md:mt-8">
+<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-3 py-1 rounded-full text-[10px] sm:text-xs font-geist font-semibold uppercase tracking-wider">UX/UI Design</span>
+<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-3 py-1 rounded-full text-[10px] sm:text-xs font-geist font-semibold uppercase tracking-wider">AI Integration</span>
+<span class="bg-brand-lime/10 text-brand-lime border border-brand-lime/30 px-3 py-1 rounded-full text-[10px] sm:text-xs font-geist font-semibold uppercase tracking-wider">Design Systems</span>
 </div>
 </div>
 </div>
 <div class="hidden lg:block text-right">
-<a class="text-6xl font-geist font-medium underline-expand inline-block group" href="#">
+<a class="text-4xl md:text-5xl lg:text-6xl font-geist font-medium underline-expand inline-block group" href="#">
           View case
         </a>
 </div>
 </div>
 <!-- Visual Gallery Component -->
-<div class="perspective-container">
-<div id="project-carousel-track" class="flex items-center overflow-x-auto snap-x snap-mandatory gap-4 sm:gap-5 md:gap-6 pb-8 px-2 sm:px-4 no-scrollbar min-h-[60vh]" style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+<div class="perspective-container -mx-1 sm:mx-0">
+<div id="project-carousel-track" class="flex items-center overflow-x-auto snap-x snap-mandatory gap-3 sm:gap-4 md:gap-5 lg:gap-6 pb-6 sm:pb-8 px-1 sm:px-2 md:px-4 no-scrollbar min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh]" style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; width: min(90vw, 100%); max-width: 90vw;">
 <!-- Card 1 -->
-<div class="project-card snap-center shrink-0 w-[74vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50 is-active" data-project-card data-title="Sentria" data-description="A polished product experience focused on clarity, storytelling, and a strong visual identity for the brand." data-bg="#17171c" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg">
+<div class="project-card snap-center shrink-0 w-[78vw] max-w-[78vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(14rem,32vh,20rem)] sm:h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.1rem] sm:rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50 is-active" data-project-card data-title="Sentria" data-description="A polished product experience focused on clarity, storytelling, and a strong visual identity for the brand." data-bg="#17171c" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781719492/Portada_ojmu6g.jpg">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(190,242,100,0.16),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"></div>
 <div class="relative z-10 flex h-full flex-col p-4 sm:p-5">
   <div class="project-card__media mb-4">
@@ -531,7 +531,7 @@
 </div>
 </div>
 <!-- Card 2 -->
-<div class="project-card snap-center shrink-0 w-[74vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="TotalPlay" data-description="A digital product direction that balances entertainment, usability, and scalable interactions across platforms." data-bg="#1e2644" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302584/totalPlayPortada_wlbvhj.webp">
+<div class="project-card snap-center shrink-0 w-[78vw] max-w-[78vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(14rem,32vh,20rem)] sm:h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.1rem] sm:rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="TotalPlay" data-description="A digital product direction that balances entertainment, usability, and scalable interactions across platforms." data-bg="#1e2644" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781302584/totalPlayPortada_wlbvhj.webp">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.16),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"></div>
 <div class="relative z-10 flex h-full flex-col p-4 sm:p-5">
   <div class="project-card__media mb-4">
@@ -548,7 +548,7 @@
 </div>
 </div>
 <!-- Card 3 -->
-<div class="project-card snap-center shrink-0 w-[74vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="Design System" data-description="A scalable design system created to streamline product teams and keep interfaces visually consistent and efficient." data-bg="#122b27" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781304167/DESIGN_SYSTEMA_kvtpn5.png">
+<div class="project-card snap-center shrink-0 w-[78vw] max-w-[78vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(14rem,32vh,20rem)] sm:h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.1rem] sm:rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="Design System" data-description="A scalable design system created to streamline product teams and keep interfaces visually consistent and efficient." data-bg="#122b27" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781304167/DESIGN_SYSTEMA_kvtpn5.png">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.16),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"></div>
 <div class="relative z-10 flex h-full flex-col p-4 sm:p-5">
   <div class="project-card__media mb-4">
@@ -565,7 +565,7 @@
 </div>
 </div>
 <!-- Card 4 -->
-<div class="project-card snap-center shrink-0 w-[74vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="Design System UI" data-description="A comprehensive interface system designed to support coherent digital products across multiple touchpoints." data-bg="#2d1b3f" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg">
+<div class="project-card snap-center shrink-0 w-[78vw] max-w-[78vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(14rem,32vh,20rem)] sm:h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.1rem] sm:rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="Design System UI" data-description="A comprehensive interface system designed to support coherent digital products across multiple touchpoints." data-bg="#2d1b3f" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(168,85,247,0.16),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"></div>
 <div class="relative z-10 flex h-full flex-col p-4 sm:p-5">
   <div class="project-card__media mb-4">
@@ -582,7 +582,7 @@
 </div>
 </div>
 <!-- Card 5 -->
-<div class="project-card snap-center shrink-0 w-[74vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="AI Product Experience" data-description="An experience crafted to turn complex AI capabilities into simple, intuitive interactions for end users." data-bg="#243233" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg">
+<div class="project-card snap-center shrink-0 w-[78vw] max-w-[78vw] sm:w-[280px] md:w-[240px] lg:w-[260px] h-[clamp(14rem,32vh,20rem)] sm:h-[clamp(18rem,38vh,24rem)] border border-white/10 rounded-[1.1rem] sm:rounded-[1.4rem] overflow-hidden relative group cursor-pointer transition-all duration-500 hover:border-brand-lime/50" data-project-card data-title="AI Product Experience" data-description="An experience crafted to turn complex AI capabilities into simple, intuitive interactions for end users." data-bg="#243233" data-image="https://res.cloudinary.com/dsbdjteyj/image/upload/v1781305488/design_system_hazjrq.jpg">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(190,242,100,0.16),transparent_36%),linear-gradient(135deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"></div>
 <div class="relative z-10 flex h-full flex-col p-4 sm:p-5">
   <div class="project-card__media mb-4">
